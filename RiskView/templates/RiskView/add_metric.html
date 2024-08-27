@@ -1,0 +1,8 @@
+{% extends 'RiskView/base.html' %}
+{% block body-block %}
+    <form action="{% url 'RiskView:perfreport' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" name="submit12" value="Add">
+    </form>
+{% endblock %}
